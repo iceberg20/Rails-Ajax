@@ -1,0 +1,17 @@
+$('body').css("background-color", "blue")
+$('body').css("color","white")
+
+$('h1').click(function(){
+	$('body').css("color","white")		
+});
+
+<%= button_to remote true>
+
+
+# arquivo: messagems_controller
+def btn_acao_01
+	respond_to |format|
+		format.js
+	end
+end
+

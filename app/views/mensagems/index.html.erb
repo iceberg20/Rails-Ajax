@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Mensagems</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Conteudo</th>
+      <th>Autor</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mensagems.each do |mensagem| %>
+      <tr>
+        <td><%= mensagem.conteudo %></td>
+        <td><%= mensagem.autor %></td>
+        <td><%= link_to 'Show', mensagem %></td>
+        <td><%= link_to 'Edit', edit_mensagem_path(mensagem) %></td>
+        <td><%= link_to 'Destroy', mensagem, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<script>
+  function
+</script>
+<%= button_to 'Change color', {action: 'color'}, remote: true %> 
+<br>
+<%= button_to 'Change size', {action: 'tamanho'}, remote: true %>
+<br>
+
+<p> ## Formulário ## </p>
+<%= render 'form' %>
+<!-- a nova mensagem é cadastrda mas a lista não é recarragda automaticamente
+    é nescessário dar F5 para ver que a mensagems foi cadastrada com sucesso via Ajax-->
+
+<br>
+
+<%= link_to 'New Mensagem', new_mensagem_path %>
